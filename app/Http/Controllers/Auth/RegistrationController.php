@@ -45,7 +45,6 @@ class RegistrationController extends Controller
             return responseApi(201, 'Admin Created Successfully', ['token'=>$token]);
         } catch (\Exception $e) {
             DB::rollBack();
-            Log::error('Error Message From Registration Proccess : '. $e->getMessage());
             return responseApi(500, 'Failed to create account. Try again later.');
         }
     }
