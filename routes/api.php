@@ -147,6 +147,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::post('create-meeting', [\App\Http\Controllers\ZoomController::class, 'createMeeting']);
 ////// Currency Exchange Endpoint
 Route::get('currency-exchange', [CurrencyController::class, 'index']);
+Route::get('convert', [CurrencyController::class, 'convert']);
 /////
 Route::get('/plans', [SubscriptionController::class, 'index']);
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe']);
